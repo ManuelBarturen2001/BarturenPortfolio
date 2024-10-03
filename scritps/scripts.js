@@ -170,17 +170,17 @@ window.onclick = function(event) {
 
 document.getElementById('whatsapp').addEventListener('click', function() {
   const formattedMessage = `Hola :D, Me interesa tu proyecto`;
-  const whatsappUrl = `https://wa.me/51924658609?text=${formattedMessage}`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   window.open(whatsappUrl, '_blank');
 });
 document.getElementById('whatsapp1').addEventListener('click', function() {
   const formattedMessage = `Hola :D, Me interesa tu proyecto`;
-  const whatsappUrl = `https://wa.me/51924658609?text=${formattedMessage}`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   window.open(whatsappUrl, '_blank');
 });
 document.getElementById('whatsapp2').addEventListener('click', function() {
   const formattedMessage = `Hola :D, Me interesa tu proyecto`;
-  const whatsappUrl = `https://wa.me/51924658609?text=${formattedMessage}`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   window.open(whatsappUrl, '_blank');
 });
 
@@ -196,7 +196,7 @@ document.getElementById('whatsapp-button').addEventListener('click', function() 
   const formattedMessage = `Nombre: ${name}%0AEmail: ${email}%0AAsunto: ${subject}%0AMensaje: ${message}`;
   
   // Enlace de WhatsApp
-  const whatsappUrl = `https://wa.me/51924658609?text=${formattedMessage}`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   
   // Abrir WhatsApp
   window.open(whatsappUrl, '_blank');
