@@ -362,7 +362,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     .mobile-hero {
         display: block;
-        height: 60vh; /* Cambiado de 60vh a 100vh para usar toda la altura */
+        height: 90vh; /* Ajustar altura para móviles */
         position: relative;
     }
 
@@ -377,27 +377,27 @@ nav ul li a:hover {
     }
 
     .mobile-hero .carousel-caption {
-        margin-top: 350px;
+        margin-top: 200px; /* Ajustar este valor para controlar el espaciado superior */
         position: absolute;
         bottom: auto;
         left: 50%;
         transform: translateX(-50%);
-        width: 90%;
-        max-width: 400px;
-        background: rgba(255, 255, 255, 0.7);
-        padding: 20px;
+        width: 80%;
+        max-width: 300px; /* Disminuir el ancho máximo */
+        background: rgba(255, 255, 255, 0.7); /* Fondo más oscuro para mayor contraste */
+        padding: 15px;
         border-radius: 10px;
         text-align: center;
     }
 
     .mobile-hero .carousel-caption h2 {
-        font-size: 1.8rem;
+        font-size: 1.2rem; /* Tamaño de fuente más pequeño */
         margin-bottom: 10px;
     }
 
     .mobile-hero .carousel-caption p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
+        font-size: 1rem; /* Reducir tamaño de fuente */
+        margin-bottom: 15px; /* Ajustar espaciado */
     }
 
     /* Añadir los botones en la versión móvil */
@@ -405,14 +405,22 @@ nav ul li a:hover {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin-top: 20px;
+        margin-top: 10px; /* Reducir margen superior */
     }
 
     .mobile-hero .cta-button {
-        padding: 10px 20px;
-        font-size: 1rem;
+        padding: 8px 15px; /* Reducir tamaño de los botones */
+        font-size: 0.9rem; /* Reducir tamaño de fuente de los botones */
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
     }
 
+    /* Ajustes adicionales para mejorar la apariencia */
+    .mobile-hero .cta-button i {
+        font-size: 1.2rem; /* Ajustar tamaño del ícono */
+        margin-right: 8px;
+    }
+
+    /* Ocultar la sección de PC */
     .hero-section {
         display: none;
     }
@@ -1407,6 +1415,35 @@ footer {
     background-color: var(--secondary-color);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
+}
+
+@media (max-width: 768px) {
+
+    [data-theme="dark"] .mobile-hero .carousel-caption {
+        background: rgba(255, 255, 255, 0.3); /* Fondo semi-transparente */
+        backdrop-filter: blur(10px); /* Efecto de desenfoque */
+        -webkit-backdrop-filter: blur(10px); /* Compatibilidad con navegadores basados en WebKit */
+        border-radius: 10px; /* Bordes redondeados */
+        border: 1px solid rgba(255, 255, 255, 0.3); /* Borde con transparencia para resaltar */
+        padding: 15px; /* Espaciado interno */
+    }
+
+    [data-theme="dark"] .mobile-hero .carousel-caption h2{
+        color: var(--bg-color);
+    }
+
+    [data-theme="dark"] .mobile-hero .carousel-caption p{
+        color: var(--bg-color);
+    }
+
+    [data-theme="dark"] .mobile-hero .carousel-caption a{
+        color: var(--bg-color);
+    }
+
+    [data-theme="dark"] .mobile-hero .cta-button {
+
+        box-shadow: 0 3px 10px var(--primary-color); /* Sombra más ligera */
+    }
 }
 
 [data-theme="dark"] .carousel-caption {
