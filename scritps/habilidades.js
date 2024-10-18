@@ -1,4 +1,6 @@
 const skills = [
+    { icon: 'devicon-docker-plain colored', name: 'Docker' },
+    { icon: 'devicon-git-plain colored', name: 'Git & GitHub' },
     { icon: 'devicon-java-plain colored', name: 'Java - JavaWeb' },
     { icon: 'devicon-html5-plain colored', name: 'HTML5' },
     { icon: 'devicon-css3-plain colored', name: 'CSS3' },
@@ -10,7 +12,6 @@ const skills = [
     { icon: 'devicon-php-plain colored', name: 'Php' },
     { icon: 'devicon-laravel-plain colored', name: 'Laravel' },
     { icon: 'devicon-python-plain colored', name: 'Python' },
-    { icon: 'devicon-git-plain colored', name: 'Git & GitHub' },
     { icon: 'devicon-mysql-plain colored', name: 'MySQL' },
     { icon: 'devicon-postgresql-plain colored', name: 'PostgreSQL' },
     { icon: 'devicon-mariadb-original', name: 'MariaDB' },

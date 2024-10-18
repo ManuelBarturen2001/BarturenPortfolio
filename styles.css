@@ -39,6 +39,17 @@ header {
     transition: background-color 0.3s ease;
 }
 
+header div .logo a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header div .logo a:hover{
+    color: var(--accent-color);
+}
+
 header.scrolled {
     background-color: rgba(15, 30, 59, 0.95);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -47,7 +58,7 @@ header.scrolled {
 .header-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    
     padding: 0 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -60,7 +71,8 @@ header.scrolled {
 
 nav {
     display: flex;
-    align-items: center;
+
+    justify-content: flex-end;
 }
 
 nav ul {
@@ -108,7 +120,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
 
     .header-container {
-        justify-content: end;
+        display: flex;
     }
 
     .logo {
@@ -116,7 +128,8 @@ nav ul li a:hover {
     }
 
     nav {
-        flex: 0;
+        flex: 1;
+        margin-top: -30px;
     }
 
     .nav-toggle {
@@ -512,6 +525,7 @@ nav ul li a:hover {
     .skills-list {
         flex-direction: column;
         align-items: center;
+        text-align: left;
     }
 
     .skills-list li {
