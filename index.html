@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.14.0/devicon.min.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="Imgs/codigo32.png" sizes="32x32"  type="image/png">
+    <link rel="icon" href="Imgs/codigo32.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -32,6 +32,7 @@
                     <li><a href="#projects">Proyectos</a></li>
                     <li><a href="#education">Educación</a></li>
                     <li><a href="#contact">Contacto</a></li>
+                    <li><a href="test.html">Test</a></li>
                     <li><button id="themeToggle" class="theme-toggle"><i class="fas fa-moon"></i></button></li>
                 </ul>
                 </ul>
@@ -63,24 +64,25 @@
             <div class="hero-text">
                 <h1 class="main-title">"Si puedes imaginarlo, puedes programarlo"</h1>
                 <h2 class="sub-title">Ingeniero de Sistemas</h2>
-                <p class="hero-description">Innovando con fe y convicción, agradecido por las habilidades que Dios me ha dado</p>
+                <p class="hero-description">Innovando con fe y convicción, agradecido por las habilidades que Dios me ha
+                    dado</p>
                 <div class="cta-buttons-container">
                     <!-- Botón LinkedIn -->
                     <a href="https://www.linkedin.com/in/mbarturen/" class="cta-button linkedin-btn" target="_blank">
                         <i class="fab fa-linkedin"></i> LinkedIn
                     </a>
-    
+
                     <!-- Botón GitHub -->
                     <a href="https://github.com/ManuelBarturen2001/" class="cta-button github-btn" target="_blank">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-    
+
                     <!-- Botón CV -->
                     <a href="CV - Manuel Barturen.pdf" class="cta-button cv-btn" target="_blank">
                         <i class="fas fa-file-alt"></i> Mi CV
                     </a>
                 </div>
-                
+
             </div>
             <!-- Imagen a la derecha -->
             <div class="hero-image">
@@ -88,7 +90,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Mantén tu versión móvil como estaba -->
     <div class="mobile-hero">
         <div class="carousel-item mobile" style="background-image: url('Imgs/IMG_2863.JPEG');">
@@ -114,7 +116,12 @@
         <div class="container">
             <h2>Sobre mí</h2>
             <p>
-                Tengo 23 años cursando en 10mo ciclo de mi profesión, soy entusiasta por el desarrollo de software, que disfruta enfrentando nuevos desafíos y aprendiendo constantemente. Mi objetivo es aplicar mis habilidades técnicas y mi capacidad analítica para resolver desafíos tecnológicos y resolver soluciones innovadoras en un entorno tecnológico en constante evolución. Me caracterizo por mi compromiso con el aprendizaje continuo y la resolución eficiente de problemas, trabajo de manera colaborativa en equipos multidisciplinarios, adaptándome rápidamente a nuevos entornos y metodologías de trabajo.
+                Tengo 23 años cursando en 10mo ciclo de mi profesión, soy entusiasta por el desarrollo de software, que
+                disfruta enfrentando nuevos desafíos y aprendiendo constantemente. Mi objetivo es aplicar mis
+                habilidades técnicas y mi capacidad analítica para resolver desafíos tecnológicos y resolver soluciones
+                innovadoras en un entorno tecnológico en constante evolución. Me caracterizo por mi compromiso con el
+                aprendizaje continuo y la resolución eficiente de problemas, trabajo de manera colaborativa en equipos
+                multidisciplinarios, adaptándome rápidamente a nuevos entornos y metodologías de trabajo.
             </p>
             <p>Entre mis habilidades blandas destacan:</p>
             <!-- Lista de habilidades blandas -->
@@ -131,7 +138,7 @@
         </div>
     </section>
 
-    
+
 
     <!-- <section id="skills" class="section">
         <div class="container">
@@ -240,7 +247,8 @@
                 <div class="experience-content">
                     <h3>Desarrollador Full Stack - Grupo Tecnitel</h3>
                     <p><strong>Enero 2022 - Abril 2022</strong></p>
-                    <p>Lideré el desarrollo e implementación de un Sistema de Gestión de Inventarios, utilizando tecnologías como Java
+                    <p>Lideré el desarrollo e implementación de un Sistema de Gestión de Inventarios, utilizando
+                        tecnologías como Java
                         y MySQL.</p>
                     <p>Diseñé e implementé una interfaz intuitiva y eficiente para gestionar el inventario de la
                         empresa, permitiendo la entrada y salida de productos, así como la realización de consultas y
@@ -271,6 +279,26 @@
                         <i class="devicon-java-plain colored" title="Java"></i>
                         <i class="devicon-mysql-plain colored" title="MySQL"></i>
                     </div>
+                    <!-- Boton Like -->
+                    <div class="like-wrapper" onclick="handleLikeClick(event)">
+                        <input class="check" type="checkbox" id="like-toggle-1" />
+                        <label class="c" for="like-toggle-1">
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="icon inactive">
+                                <path
+                                    d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z">
+                                </path>
+                            </svg>
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="icon active">
+                                <path
+                                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+                                </path>
+                            </svg>
+                            <div class="checkmark"></div>
+                            <span class="like-text">Like</span>
+                        </label>
+                    </div>
+                    <!-- Fin Boton Like -->
+
                 </div>
                 <div class="project-card" onclick="openModal('modal2')">
                     <img src="Imgs/sislibrary/cap.png" alt="Sistema de Biblioteca">
@@ -287,6 +315,25 @@
                         <i class="devicon-sequelize-plain" title="Sequelize"></i>
                         <i class="devicon-mysql-plain colored" title="MySQL"></i>
                     </div>
+                    <!-- Boton Like -->
+                    <div class="like-wrapper" onclick="handleLikeClick(event)">
+                        <input class="check" type="checkbox" id="like-toggle-2" />
+                        <label class="c" for="like-toggle-2">
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="icon inactive">
+                                <path
+                                    d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z">
+                                </path>
+                            </svg>
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="icon active">
+                                <path
+                                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+                                </path>
+                            </svg>
+                            <div class="checkmark"></div>
+                            <span class="like-text">Like</span>
+                        </label>
+                    </div>
+                    <!-- Fin Boton Like -->
                 </div>
                 <div class="project-card" onclick="openModal('modal3')">
                     <img src="Imgs/sisdoc/s1.png" alt="Sistema de Gestión de Documentos">
@@ -299,15 +346,34 @@
                         <i class="devicon-laravel-plain colored" title="Laravel"></i>
                         <i class="devicon-mariadb-original" title="MariaDB"></i>
                     </div>
+                    <!-- Boton Like -->
+                    <div class="like-wrapper" onclick="handleLikeClick(event)">
+                        <input class="check" type="checkbox" id="like-toggle-3" />
+                        <label class="c" for="like-toggle-3">
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="icon inactive">
+                                <path
+                                    d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z">
+                                </path>
+                            </svg>
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="icon active">
+                                <path
+                                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+                                </path>
+                            </svg>
+                            <div class="checkmark"></div>
+                            <span class="like-text">Like</span>
+                        </label>
+                    </div>
+                    <!-- Fin Boton Like -->
                 </div>
             </div>
         </div>
     </section>
 
-    
+
     <section id="education" class="section">
         <h2>Estudios</h2>
-    
+
         <div class="cardsx-containerx">
             <!-- Card 1 -->
             <div class="containerx">
@@ -326,7 +392,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Card 2 -->
             <div class="containerx">
                 <div class="cardx">
@@ -345,7 +411,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Card 3 -->
             <div class="containerx">
                 <div class="cardx">
@@ -367,7 +433,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Card 4 -->
             <div class="containerx">
                 <div class="cardx">
@@ -386,7 +452,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Card 5 -->
             <div class="containerx">
                 <div class="cardx">
@@ -407,7 +473,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Card 6 -->
             <div class="containerx">
                 <div class="cardx">
@@ -428,9 +494,9 @@
                 </div>
             </div>
 
-            
+
         </div>
-    
+
         <!-- Modal para mostrar el certificado 
         <div id="certificateModalx" class="modalx">
             <div class="modal-content">
@@ -452,29 +518,58 @@
                 <form id="contact-form" action="#" method="post">
                     <label for="name">Nombre</label>
                     <input type="text" id="name" name="name" required>
-    
+
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
-    
+
                     <label for="subject">Asunto</label>
                     <input type="text" id="subject" name="subject" required>
-    
+
                     <label for="message">Mensaje</label>
                     <textarea id="message" name="message" required></textarea>
                     <ul class="contact-info">
-                        <li id="whatsapp-button"><i class="fab fa-whatsapp"></i> Whatsapp </li>
+                        <!-- <li id="whatsapp-button"><i class="fab fa-whatsapp"></i> Whatsapp </li> -->
+                        <button class="w2" id="whatsapp">
+                            Contactame
+                            <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                                    fill="#fff"></path>
+                                <path
+                                    d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                                    fill="#fff"></path>
+                                <path
+                                    d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                                    fill="#cfd8dc"></path>
+                                <path
+                                    d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                                    fill="#40c351"></path>
+                                <path clip-rule="evenodd"
+                                    d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                                    fill-rule="evenodd" fill="#fff"></path>
+                            </svg>
+                        </button>
                     </ul>
-                    
+
                 </form>
             </div>
-        </div> 
-    
+        </div>
+
         <div class="container">
             <ul class="contact-info">
-                <li><i class="fas fa-envelope"></i> juanbarturench@gmail.com</li>
-                <li><i class="fas fa-phone"></i> +51 924658309</li>
+                <li>
+                    <a href="mailto:juanbarturench@gmail.com?subject=Interesado%20en%20contactarte&body=Hola%20Manuel%20Barturen,%20me%20interesa%20contactarme%20contigo.">
+                        <i class="fas fa-envelope"></i> juanbarturench@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+51924658309">
+                        <i class="fas fa-phone"></i> +51 924658309
+                    </a>
+                </li>
                 <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mbarturen/" target="_blank">LinkedIn</a></li>
-                <li><i class="fab fa-github"></i> <a href="https://github.com/ManuelBarturen2001/" target="_blank">GitHub</a></li>
+                <li><i class="fab fa-github"></i> <a href="https://github.com/ManuelBarturen2001/"
+                        target="_blank">GitHub</a></li>
             </ul>
         </div>
     </section>
@@ -489,23 +584,49 @@
             <span class="close" onclick="closeModal('modal1')">&times;</span>
             <h3 class="modal-title">Sistema de Gestión Comercial</h3>
             <br>
-            <p class="modal-description">Un sistema integral para la gestión de ventas, inventario y generación de reportes, diseñado para optimizar las operaciones de pequeñas y medianas empresas.</p>
+            <p class="modal-description">Un sistema integral para la gestión de ventas, inventario y generación de
+                reportes, diseñado para optimizar las operaciones de pequeñas y medianas empresas.</p>
             <ul class="modal-features">
-                <li>Gestión de ventas e inventario</li>
-                <li>Generación de reportes detallados</li>
-                <li>Roles de administrador y vendedor</li>
-                <li>Manejo de categorías y productos</li>
-                <li>Seguimiento de clientes y proveedores</li>
-                <li>Gráficos de ventas y ganancias</li>
+                <li>● Gestión de ventas e inventario</li>
+                <li>● Generación de reportes detallados</li>
+                <li>● Roles de administrador y vendedor</li>
+                <li>● Manejo de categorías y productos</li>
+                <li>● Seguimiento de clientes y proveedores</li>
+                <li>● Gráficos de ventas y ganancias</li>
             </ul>
             <!-- Nueva sección de galería de imágenes -->
             <div class="modal-gallery">
-                <img src="Imgs/sisventas/FondoMenuPrincipal.jpg" alt="Menu" onclick="openImageInNewTab('Imgs/sisventas/FondoMenuPrincipal.jpg')">
-                <img src="Imgs/sisventas/FondoInventario.jpg" alt="Inventario" onclick="openImageInNewTab('Imgs/sisventas/FondoInventario.jpg')">
-                <img src="Imgs/sisventas/FondoMenuReportes.jpg" alt="Reportes" onclick="openImageInNewTab('Imgs/sisventas/FondoMenuReportes.jpg')">
-                <img src="Imgs/sisventas/FondoMenuStackeholders.jpg" alt="Stackeholders" onclick="openImageInNewTab('Imgs/sisventas/FondoMenuStackeholders.jpg')">
+                <img src="Imgs/sisventas/FondoMenuPrincipal.jpg" alt="Menu"
+                    onclick="openImageInNewTab('Imgs/sisventas/FondoMenuPrincipal.jpg')">
+                <img src="Imgs/sisventas/FondoInventario.jpg" alt="Inventario"
+                    onclick="openImageInNewTab('Imgs/sisventas/FondoInventario.jpg')">
+                <img src="Imgs/sisventas/FondoMenuReportes.jpg" alt="Reportes"
+                    onclick="openImageInNewTab('Imgs/sisventas/FondoMenuReportes.jpg')">
+                <img src="Imgs/sisventas/FondoMenuStackeholders.jpg" alt="Stackeholders"
+                    onclick="openImageInNewTab('Imgs/sisventas/FondoMenuStackeholders.jpg')">
             </div>
-            <li id="whatsapp" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li>
+            <!-- <li id="whatsapp" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li> -->
+
+            <button class="w2" id="whatsapp">
+                Contactame
+                <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                        fill="#fff"></path>
+                    <path
+                        d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                        fill="#fff"></path>
+                    <path
+                        d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                        fill="#cfd8dc"></path>
+                    <path
+                        d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                        fill="#40c351"></path>
+                    <path clip-rule="evenodd"
+                        d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                        fill-rule="evenodd" fill="#fff"></path>
+                </svg>
+            </button>
         </div>
     </div>
 
@@ -514,22 +635,44 @@
             <span class="close" onclick="closeModal('modal2')">&times;</span>
             <h3 class="modal-title">Sistema de Gestion de Biblioteca</h3>
             <br>
-            <p class="modal-description">Una solución completa para la gestión de bibliotecas, que facilita el control de préstamos, devoluciones y el inventario de libros.</p>
+            <p class="modal-description">Una solución completa para la gestión de bibliotecas, que facilita el control
+                de préstamos, devoluciones y el inventario de libros.</p>
             <ul class="modal-features">
-                <li>Gestión de préstamos y devoluciones</li>
-                <li>Catálogo completo de libros</li>
-                <li>Roles: administrador, bibliotecario y prestamista</li>
-                <li>Seguimiento de disponibilidad de libros</li>
-                <li>Historial de préstamos por usuario</li>
-                <li>Notificaciones de vencimientos</li>
+                <li>● Gestión de préstamos y devoluciones</li>
+                <li>● Catálogo completo de libros</li>
+                <li>● Roles: administrador, bibliotecario y prestamista</li>
+                <li>● Seguimiento de disponibilidad de libros</li>
+                <li>● Historial de préstamos por usuario</li>
+                <li>● Notificaciones de vencimientos</li>
             </ul>
             <div class="modal-gallery">
                 <img src="Imgs/sislibrary/1.png" alt="Menu" onclick="openImageInNewTab('Imgs/sislibrary/1.png')">
                 <img src="Imgs/sislibrary/2.png" alt="Inventario" onclick="openImageInNewTab('Imgs/sislibrary/2.png')">
                 <img src="Imgs/sislibrary/3.png" alt="Reportes" onclick="openImageInNewTab('Imgs/sislibrary/3.png')">
-                <img src="Imgs/sislibrary/4.png" alt="Stackeholders" onclick="openImageInNewTab('Imgs/sislibrary/4.png')">
+                <img src="Imgs/sislibrary/4.png" alt="Stackeholders"
+                    onclick="openImageInNewTab('Imgs/sislibrary/4.png')">
             </div>
-            <li id="whatsapp1" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li>
+            <!-- <li id="whatsapp1" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li> -->
+            <button class="w2" id="whatsapp1">
+                Conctatame
+                <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                        fill="#fff"></path>
+                    <path
+                        d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                        fill="#fff"></path>
+                    <path
+                        d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                        fill="#cfd8dc"></path>
+                    <path
+                        d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                        fill="#40c351"></path>
+                    <path clip-rule="evenodd"
+                        d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                        fill-rule="evenodd" fill="#fff"></path>
+                </svg>
+            </button>
         </div>
     </div>
 
@@ -538,22 +681,43 @@
             <span class="close" onclick="closeModal('modal3')">&times;</span>
             <h3 class="modal-title">Sistema de Gestión de Documentos</h3>
             <br>
-            <p class="modal-description">Un sistema eficiente para la creación, almacenamiento y control de versiones de documentos oficiales en organizaciones.</p>
+            <p class="modal-description">Un sistema eficiente para la creación, almacenamiento y control de versiones de
+                documentos oficiales en organizaciones.</p>
             <ul class="modal-features">
-                <li>Control de versiones de documentos</li>
-                <li>Organización por asuntos y facultades</li>
-                <li>Búsqueda avanzada de documentos</li>
-                <li>Gestión de permisos de acceso</li>
-                <li>Historial de modificaciones</li>
-                <li>Generación de codigo QR en los documentos</li>
+                <li>● Control de versiones de documentos</li>
+                <li>● Organización por asuntos y facultades</li>
+                <li>● Búsqueda avanzada de documentos</li>
+                <li>● Gestión de permisos de acceso</li>
+                <li>● Historial de modificaciones</li>
+                <li>● Generación de codigo QR en los documentos</li>
             </ul>
             <div class="modal-gallery">
                 <img src="Imgs/sisdoc/s2.jpeg" alt="Menu" onclick="openImageInNewTab('Imgs/sisdoc/s2.jpeg')">
                 <img src="Imgs/sisdoc/s3.png" alt="Inventario" onclick="openImageInNewTab('Imgs/sisdoc/s3.png')">
                 <img src="Imgs/sisdoc/s4.png" alt="Reportes" onclick="openImageInNewTab('Imgs/sisdoc/s4.png')">
-                
+
             </div>
-            <li id="whatsapp2" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li>
+            <!-- <li id="whatsapp2" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li> -->
+            <button class="w2" id="whatsapp2">
+                Contactame
+                <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                        fill="#fff"></path>
+                    <path
+                        d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                        fill="#fff"></path>
+                    <path
+                        d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                        fill="#cfd8dc"></path>
+                    <path
+                        d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                        fill="#40c351"></path>
+                    <path clip-rule="evenodd"
+                        d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                        fill-rule="evenodd" fill="#fff"></path>
+                </svg>
+            </button>
         </div>
     </div>
     <script src="scritps/habilidades.js"></script>
