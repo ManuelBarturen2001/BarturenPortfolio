@@ -168,6 +168,12 @@ window.onclick = function(event) {
   });
 };
 
+function handleLikeClick(event) {
+  event.stopPropagation(); // Evita que el clic en el botón "Like" active el clic en la tarjeta
+  // Aquí puedes manejar cualquier acción adicional del botón "Like"
+  console.log("Like button clicked!");
+}
+
 document.getElementById('whatsapp').addEventListener('click', function() {
   const formattedMessage = `Hola :D, Me interesa tu proyecto`;
   const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
