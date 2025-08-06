@@ -174,98 +174,87 @@ function handleLikeClick(event) {
   console.log("Like button clicked!");
 }
 
-// Event listeners para botones de WhatsApp en modales (mantener estos)
-document.addEventListener('DOMContentLoaded', function() {
-  const whatsappButtons = document.querySelectorAll('#whatsapp, #whatsapp1, #whatsapp2');
-  whatsappButtons.forEach(button => {
-    if (button) {
-      button.addEventListener('click', function() {
-        const formattedMessage = `Hola :D, Me interesa tu proyecto`;
-        const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
-        window.open(whatsappUrl, '_blank');
-      });
-    }
-  });
+document.getElementById('whatsapp').addEventListener('click', function() {
+  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
+  window.open(whatsappUrl, '_blank');
+});
+document.getElementById('whatsapp1').addEventListener('click', function() {
+  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
+  window.open(whatsappUrl, '_blank');
+});
+document.getElementById('whatsapp2').addEventListener('click', function() {
+  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
+  window.open(whatsappUrl, '_blank');
+});
+document.getElementById('whatsapp3').addEventListener('click', function() {
+  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
+  window.open(whatsappUrl, '_blank');
+});
+document.getElementById('whatsapp4').addEventListener('click', function() {
+  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
+  window.open(whatsappUrl, '_blank');
+});
+document.getElementById('whatsapp5').addEventListener('click', function() {
+  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
+  window.open(whatsappUrl, '_blank');
+});
+document.getElementById('whatsapp6').addEventListener('click', function() {
+  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
+  window.open(whatsappUrl, '_blank');
+});
+document.getElementById('whatsapp7').addEventListener('click', function() {
+  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
+  window.open(whatsappUrl, '_blank');
+});
+document.getElementById('whatsapp8').addEventListener('click', function () {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const fullMessage = `Hola, soy ${name}\nEmail: ${email}\nAsunto: ${subject}\nMensaje: ${message}`;
+  const whatsappUrl = `https://wa.me/51924658309?text=${encodeURIComponent(fullMessage)}`;
+  window.open(whatsappUrl, '_blank');
 });
 
-// Función para abrir WhatsApp desde el formulario
-function openWhatsApp() {
-  console.log('openWhatsApp function called');
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+  fetch("https://formsubmit.co/ajax/barturenjuan@gmail.com", {
+      method: "POST",
+      body: formData
+  })
+  .then(response => {
+      if (response.ok) {
+          document.getElementById('success-message').style.display = 'block';
+          document.getElementById('contact-form').reset();
+      }
+  })
+  .catch(error => console.error('Error:', error));
+});
+
+// Contactame
+
+document.getElementById('whatsapp-button').addEventListener('click', function() {
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const subject = document.getElementById('subject').value;
   const message = document.getElementById('message').value;
   
-  console.log('Form values:', { name, email, subject, message });
-  
-  // Validar que al menos haya un nombre
-  if (!name.trim()) {
-    alert('Por favor, ingresa tu nombre antes de contactar por WhatsApp.');
-    return;
-  }
-  
   // Formatear el mensaje
-  let formattedMessage = `Hola Manuel, soy ${name}`;
-  
-  if (email.trim()) {
-    formattedMessage += `%0AEmail: ${email}`;
-  }
-  
-  if (subject.trim()) {
-    formattedMessage += `%0AAsunto: ${subject}`;
-  }
-  
-  if (message.trim()) {
-    formattedMessage += `%0AMensaje: ${message}`;
-  }
+  const formattedMessage = `Nombre: ${name}%0AEmail: ${email}%0AAsunto: ${subject}%0AMensaje: ${message}`;
   
   // Enlace de WhatsApp
   const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   
-  console.log('Opening WhatsApp URL:', whatsappUrl);
-  
   // Abrir WhatsApp
   window.open(whatsappUrl, '_blank');
-}
-
-// Función para manejar el envío del formulario
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOMContentLoaded event fired');
-  const contactForm = document.getElementById('contact-form');
-  
-  console.log('Contact form found:', contactForm);
-  
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      console.log('Form submit event triggered');
-      e.preventDefault();
-      
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value;
-      
-      console.log('Form values:', { name, email, subject, message });
-      
-      // Validaciones básicas
-      if (!name.trim() || !email.trim() || !subject.trim() || !message.trim()) {
-        alert('Por favor, completa todos los campos obligatorios.');
-        return;
-      }
-      
-      // Validar formato de email
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert('Por favor, ingresa un email válido.');
-        return;
-      }
-      
-      // Aquí podrías enviar el formulario a un servidor
-      // Por ahora, mostraremos un mensaje de éxito
-      alert('¡Gracias por tu mensaje! Te responderé pronto.');
-      
-      // Limpiar el formulario
-      contactForm.reset();
-    });
-  }
 });

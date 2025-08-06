@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasarela de Pago - IziPay</title>
+    
+    <!-- IziPay Popper SDK -->
+    <script src="https://api.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
+            kr-public-key=""
+            kr-language="es-ES">
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .payment-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .payment-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2d3748;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .header p {
+            color: #718096;
+            font-size: 16px;
+        }
+        
+        .product-info {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .product-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .product-item:last-child {
+            margin-bottom: 0;
+            font-weight: 600;
+            font-size: 18px;
+            color: #2d3748;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 12px;
+            margin-top: 12px;
+        }
+        
+        .product-name {
+            color: #4a5568;
+        }
+        
+        .product-price {
+            color: #2d3748;
+            font-weight: 500;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            color: #2d3748;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            background: white;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .pay-button {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 16px 24px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pay-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .pay-button:disabled {
+            background: #a0aec0;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .status-message {
+            padding: 16px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 500;
+            display: none;
+        }
+        
+        .status-message.success {
+            background: #c6f6d5;
+            color: #22543d;
+            border: 1px solid #9ae6b4;
+        }
+        
+        .status-message.error {
+            background: #fed7d7;
+            color: #742a2a;
+            border: 1px solid #feb2b2;
+        }
+        
+        .status-message.info {
+            background: #bee3f8;
+            color: #2a4365;
+            border: 1px solid #90cdf4;
+        }
+        
+        .security-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 12px;
+            background: #f0fff4;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #22543d;
+        }
+        
+        .config-section {
+            background: #fff8dc;
+            border: 2px solid #f0ad4e;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .config-title {
+            color: #8b4513;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .config-instructions {
+            color: #8b4513;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .credentials-form {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        
+        .payment-options {
+            background: #f8f9ff;
+            border: 2px solid #e6e9ff;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .payment-method {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .payment-method:hover {
+            border-color: #667eea;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+        }
+        
+        .payment-method-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .payment-method-icon {
+            font-size: 24px;
+            margin-right: 12px;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        @media (max-width: 480px) {
+            .payment-container {
+                padding: 24px;
+                margin: 10px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <!-- Sección de configuración -->
+        <div class="config-section" id="configSection">
+            <div class="config-title">🔧 Configuración IziPay</div>
+            <div class="config-instructions">
+                Solo necesitas tu <strong>Public Key</strong> de IziPay:
+            </div>
+            <div class="credentials-form">
+                <div class="form-group">
+                    <label class="form-label">Public Key</label>
+                    <input type="text" class="form-input" id="publicKey" placeholder="Ej: 12345678:testpublickey_abc123...">
+                    <small style="color: #666; font-size: 12px;">
+                        Lo encuentras en tu Back Office → Configuración → Claves
+                    </small>
+                </div>
+                <button onclick="saveConfig()" class="pay-button" style="margin-top: 10px;">
+                    Configurar
+                </button>
+            </div>
+        </div>
+        
+        <!-- Header (oculto inicialmente) -->
+        <div class="header hidden" id="paymentHeader">
+            <h1>💳 Realizar Pago</h1>
+            <p>Procesamiento seguro con IziPay</p>
+        </div>
+        
+        <!-- Información del producto -->
+        <div class="product-info hidden" id="productInfo">
+            <div class="product-item">
+                <span class="product-name">Producto:</span>
+                <span class="product-price">Servicio Premium</span>
+            </div>
+            <div class="product-item">
+                <span class="product-name">Cantidad:</span>
+                <span class="product-price">1</span>
+            </div>
+            <div class="product-item">
+                <span class="product-name">Total:</span>
+                <span class="product-price">S/ 25.00</span>
+            </div>
+        </div>
+        
+        <!-- Información del cliente -->
+        <div class="hidden" id="customerInfo">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                <div class="form-group">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-input" id="customerName" placeholder="Tu nombre completo" value="Juan Pérez">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" id="customerEmail" placeholder="tu@email.com" value="juan@example.com">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mensajes de estado -->
+        <div id="statusMessage" class="status-message"></div>
+        
+        <!-- Opciones de pago -->
+        <div class="payment-options hidden" id="paymentOptions">
+            <h3 style="margin-bottom: 20px; color: #2d3748;">Selecciona método de pago:</h3>
+            
+            <div class="payment-method" onclick="openPaymentPopper()">
+                <div class="payment-method-info">
+                    <span class="payment-method-icon">💳</span>
+                    <div>
+                        <div style="font-weight: 600;">Tarjeta de Crédito/Débito</div>
+                        <div style="font-size: 14px; color: #666;">Visa, Mastercard, American Express</div>
+                    </div>
+                </div>
+                <span style="color: #667eea;">→</span>
+            </div>
+            
+            <div class="payment-method" onclick="openPaymentPopper()">
+                <div class="payment-method-info">
+                    <span class="payment-method-icon">🏪</span>
+                    <div>
+                        <div style="font-weight: 600;">Pago en Efectivo</div>
+                        <div style="font-size: 14px; color: #666;">PagoEfectivo, Western Union</div>
+                    </div>
+                </div>
+                <span style="color: #667eea;">→</span>
+            </div>
+            
+            <div class="payment-method" onclick="openPaymentPopper()">
+                <div class="payment-method-info">
+                    <span class="payment-method-icon">🏦</span>
+                    <div>
+                        <div style="font-weight: 600;">Transferencia Bancaria</div>
+                        <div style="font-size: 14px; color: #666;">Desde tu cuenta bancaria</div>
+                    </div>
+                </div>
+                <span style="color: #667eea;">→</span>
+            </div>
+        </div>
+        
+        <!-- Información de seguridad -->
+        <div class="security-info hidden" id="securityInfo">
+            <span style="margin-right: 8px;">🔐</span>
+            <span>Pago 100% seguro protegido con SSL</span>
+        </div>
+    </div>
+
+    <script>
+        let CONFIG = {
+            PUBLIC_KEY: '',
+            SITE_URL: 'https://mbarturench.web.app',
+            PRODUCT: {
+                name: "Servicio Premium",
+                amount: 2500, // 25.00 PEN en centavos
+                currency: "PEN"
+            }
+        };
+        
+        // Funciones de utilidad
+        function showStatus(message, type = 'info') {
+            const statusEl = document.getElementById('statusMessage');
+            statusEl.className = `status-message ${type}`;
+            statusEl.textContent = message;
+            statusEl.style.display = 'block';
+            
+            if (type !== 'error') {
+                setTimeout(() => {
+                    statusEl.style.display = 'none';
+                }, 3000);
+            }
+        }
+        
+        function hideElement(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+        
+        function showElement(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+        
+        // Guardar configuración
+        function saveConfig() {
+            const publicKey = document.getElementById('publicKey').value.trim();
+            
+            if (!publicKey) {
+                showStatus('Por favor ingresa tu Public Key', 'error');
+                return;
+            }
+            
+            if (!publicKey.includes(':')) {
+                showStatus('El Public Key debe tener el formato: SHOP_ID:clave', 'error');
+                return;
+            }
+            
+            CONFIG.PUBLIC_KEY = publicKey;
+            
+            // Configurar el SDK con la clave
+            const script = document.querySelector('script[src*="kr-payment-form"]');
+            script.setAttribute('kr-public-key', publicKey);
+            
+            // Ocultar configuración y mostrar pago
+            hideElement('configSection');
+            showElement('paymentHeader');
+            showElement('productInfo');
+            showElement('customerInfo');
+            showElement('paymentOptions');
+            showElement('securityInfo');
+            
+            showStatus('¡Configuración lista! Ahora puedes procesar el pago.', 'success');
+            
+            console.log('✅ Configuración guardada:', {
+                publicKey: publicKey.substring(0, 15) + '...',
+                siteUrl: CONFIG.SITE_URL
+            });
+        }
+        
+        // Abrir ventana de pago (Popper)
+        function openPaymentPopper() {
+            const customerName = document.getElementById('customerName').value.trim();
+            const customerEmail = document.getElementById('customerEmail').value.trim();
+            
+            if (!customerName || !customerEmail) {
+                showStatus('Por favor completa todos los campos del cliente', 'error');
+                return;
+            }
+            
+            if (!customerEmail.includes('@')) {
+                showStatus('Por favor ingresa un email válido', 'error');
+                return;
+            }
+            
+            try {
+                console.log('🚀 Abriendo formulario de pago...');
+                
+                // Generar ID único
+                const orderId = `ORDER_${Date.now()}_${Math.random().toString(36).substr(2, 6)}`;
+                
+                // Configurar parámetros de pago
+                const paymentParams = {
+                    amount: CONFIG.PRODUCT.amount,
+                    currency: CONFIG.PRODUCT.currency,
+                    orderId: orderId,
+                    customer: {
+                        email: customerEmail,
+                        firstName: customerName.split(' ')[0] || customerName,
+                        lastName: customerName.split(' ')[1] || ''
+                    }
+                };
+                
+                console.log('📋 Parámetros de pago:', paymentParams);
+                
+                // Abrir Popper de IziPay
+                KR.openPopper({
+                    // Configuración básica
+                    'kr-public-key': CONFIG.PUBLIC_KEY,
+                    'kr-language': 'es-ES',
+                    'kr-currency': CONFIG.PRODUCT.currency,
+                    'kr-amount': CONFIG.PRODUCT.amount,
+                    'kr-order-id': orderId,
+                    
+                    // Datos del cliente
+                    'kr-customer-email': customerEmail,
+                    'kr-customer-name': customerName,
+                    
+                    // URLs de retorno
+                    'kr-post-url-success': `${CONFIG.SITE_URL}/pago-exitoso.html`,
+                    'kr-post-url-refused': `${CONFIG.SITE_URL}/pago-fallido.html`,
+                    
+                    // Configuración visual
+                    'kr-theme': 'material',
+                    'kr-spa-mode': true,
+                    
+                    // Metadatos
+                    'kr-metadata': JSON.stringify({
+                        product: CONFIG.PRODUCT.name,
+                        source: 'firebase_frontend'
+                    })
+                });
+                
+                showStatus('Abriendo formulario de pago seguro...', 'info');
+                
+            } catch (error) {
+                console.error('💥 Error abriendo formulario:', error);
+                showStatus(`Error: ${error.message}`, 'error');
+            }
+        }
+        
+        // Inicialización de la página
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Página de pago cargada');
+            
+            // Verificar SDK
+            if (typeof KR === 'undefined') {
+                console.error('❌ IziPay SDK no disponible');
+                showStatus('Error: No se pudo cargar IziPay SDK', 'error');
+                return;
+            }
+            
+            // Configurar eventos del SDK
+            try {
+                KR.onError(function(event) {
+                    console.error('❌ Error de IziPay:', event);
+                    const errorMsg = event.KR?.error?.message || 'Error en el pago';
+                    showStatus(`Error: ${errorMsg}`, 'error');
+                });
+                
+                KR.onFormReady(function() {
+                    console.log('✅ Formulario IziPay listo');
+                });
+                
+                KR.onPopperClosed(function() {
+                    console.log('ℹ️ Ventana de pago cerrada');
+                    showStatus('Ventana de pago cerrada', 'info');
+                });
+                
+                console.log('✅ SDK configurado correctamente');
+                
+            } catch (error) {
+                console.error('💥 Error configurando SDK:', error);
+            }
+            
+            showStatus('Configura tu Public Key para comenzar', 'info');
+        });
+        
+        // Manejo de errores globales
+        window.addEventListener('error', function(event) {
+            console.error('💥 Error global:', event.error);
+        });
+        
+        // Funciones adicionales para debugging
+        window.debugKR = function() {
+            console.log('🔍 Debug IziPay:', {
+                krAvailable: typeof KR !== 'undefined',
+                publicKey: CONFIG.PUBLIC_KEY.substring(0, 15) + '...',
+                config: CONFIG
+            });
+        };
+    </script>
+</body>
+</html>
