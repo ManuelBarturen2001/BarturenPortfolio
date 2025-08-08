@@ -27,12 +27,18 @@
                     <span class="bar"></span>
                 </div>
                 <ul id="nav-list">
-                    <li><a href="#about">Sobre mí</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#experience">Experiencia</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#education">Educación</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
+                    <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+                    <li><a href="#experience" data-i18n="nav.experience">Experiencia</a></li>
+                    <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+                    <li><a href="#education" data-i18n="nav.education">Educación</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+                    <li>
+                        <select id="languageSelect" aria-label="Language selector">
+                            <option value="es">ES</option>
+                            <option value="en">EN</option>
+                        </select>
+                    </li>
                     <!-- <li><a href="pago.html">Test</a></li> -->
                     <li><button id="themeToggle" class="theme-toggle"><i class="fas fa-moon"></i></button></li>
                 </ul>
@@ -45,25 +51,25 @@
         <div class="hero-content">
             <!-- Sección de texto a la izquierda -->
             <div class="hero-text">
-                <h1 class="main-title">"Si puedes imaginarlo, puedes programarlo"</h1>
+                <h1 class="main-title" data-i18n="hero.quote">"Si puedes imaginarlo, puedes programarlo"</h1>
 
-                <h2 class="sub-title">Ingeniero de Sistemas</h2>
-                <p class="hero-description">Innovando con fe y convicción, agradecido por las habilidades que Dios me ha
+                <h2 class="sub-title" data-i18n="hero.role">Ingeniero de Sistemas</h2>
+                <p class="hero-description" data-i18n="hero.description">Innovando con fe y convicción, agradecido por las habilidades que Dios me ha
                     dado</p>
                 <div class="cta-buttons-container">
                     <!-- Botón LinkedIn -->
                     <a href="https://www.linkedin.com/in/mbarturen/" class="cta-button linkedin-btn" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
+                        <i class="fab fa-linkedin"></i> <span data-i18n="hero.linkedin">LinkedIn</span>
                     </a>
 
                     <!-- Botón GitHub -->
                     <a href="https://github.com/ManuelBarturen2001/" class="cta-button github-btn" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
+                        <i class="fab fa-github"></i> <span data-i18n="hero.github">GitHub</span>
                     </a>
 
                     <!-- Botón CV -->
                     <a href="CV-ManuelBarturen.pdf" class="cta-button cv-btn" target="_blank">
-                        <i class="fas fa-file-alt"></i> Mi CV
+                        <i class="fas fa-file-alt"></i> <span data-i18n="hero.cv">Mi CV</span>
                     </a>
                 </div>
 
@@ -78,17 +84,17 @@
     <div class="mobile-hero">
         <div class="carousel-item mobile" style="background-image: url('Img/perfils.jpg');">
             <div class="carousel-caption">
-                <h2>Si puedes imaginarlo, puedes programarlo</h2>
-                <p>Ingeniero de Sistemas</p>
+                <h2 data-i18n="hero.quote">Si puedes imaginarlo, puedes programarlo</h2>
+                <p data-i18n="hero.role">Ingeniero de Sistemas</p>
                 <div class="cta-buttons-container">
                     <a href="https://www.linkedin.com/in/mbarturen/" class="cta-button linkedin-btn" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
+                        <i class="fab fa-linkedin"></i> <span data-i18n="hero.linkedin">LinkedIn</span>
                     </a>
                     <a href="https://github.com/ManuelBarturen2001/" class="cta-button github-btn" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
+                        <i class="fab fa-github"></i> <span data-i18n="hero.github">GitHub</span>
                     </a>
                     <a href="CV-ManuelBarturen.pdf" class="cta-button cv-btn" target="_blank">
-                        <i class="fas fa-file-alt"></i> Mi CV
+                        <i class="fas fa-file-alt"></i> <span data-i18n="hero.cv">Mi CV</span>
                     </a>
                 </div>
             </div>
@@ -97,8 +103,8 @@
 
     <section id="about" class="section" data-aos="zoom-in">
         <div class="container">
-            <h2>Sobre mí</h2>
-            <p>
+            <h2 data-i18n="about.title">Sobre mí</h2>
+            <p data-i18n="about.paragraph1">
                 Tengo 24 años, soy egresado de la carrrera de Ingeniería de Sistemas, entusiasta por el desarrollo de software, que
                 disfruta enfrentando nuevos desafíos y aprendiendo constantemente. Mi objetivo es aplicar mis
                 habilidades técnicas y mi capacidad analítica para resolver desafíos tecnológicos y resolver soluciones
@@ -106,16 +112,16 @@
                 aprendizaje continuo y la resolución eficiente de problemas, trabajo de manera colaborativa en equipos
                 multidisciplinarios, adaptándome rápidamente a nuevos entornos y metodologías de trabajo.
             </p>
-            <p>Entre mis habilidades blandas destacan:</p>
+            <p data-i18n="about.softSkillsTitle">Entre mis habilidades blandas destacan:</p>
             <!-- Lista de habilidades blandas -->
             <ul class="skills-list">
-                <li><i class="fas fa-users"></i> Trabajo en equipo</li>
-                <li><i class="fas fa-lightbulb"></i> Creatividad e Innovación</li>
-                <li><i class="fas fa-cogs"></i> Resolución de problemas</li>
-                <li><i class="fas fa-user-tie"></i> Habilidades de liderazgo</li>
-                <li><i class="fas fa-book"></i> Aprendizaje continuo</li>
-                <li><i class="fas fa-handshake"></i> Comunicación Asertiva</li>
-                <li class="xd"><i class="fas fa-arrows-alt"></i> Adaptabilidad y Flexibilidad</li>
+                <li><i class="fas fa-users"></i> <span data-i18n="about.soft.teamwork">Trabajo en equipo</span></li>
+                <li><i class="fas fa-lightbulb"></i> <span data-i18n="about.soft.creativity">Creatividad e Innovación</span></li>
+                <li><i class="fas fa-cogs"></i> <span data-i18n="about.soft.problemSolving">Resolución de problemas</span></li>
+                <li><i class="fas fa-user-tie"></i> <span data-i18n="about.soft.leadership">Habilidades de liderazgo</span></li>
+                <li><i class="fas fa-book"></i> <span data-i18n="about.soft.continuousLearning">Aprendizaje continuo</span></li>
+                <li><i class="fas fa-handshake"></i> <span data-i18n="about.soft.communication">Comunicación Asertiva</span></li>
+                <li class="xd"><i class="fas fa-arrows-alt"></i> <span data-i18n="about.soft.adaptability">Adaptabilidad y Flexibilidad</span></li>
             </ul>
             <!-- <p><strong>Chiclayo, Perú</strong></p> -->
         </div>
@@ -123,7 +129,7 @@
 
     <section id="skills" data-aos="zoom-in">
         <div class="container">
-            <h2>Habilidades</h2>
+            <h2 data-i18n="skills.title">Habilidades</h2>
             <br>
             <div class="slider-container">
                 <div class="items">
@@ -135,13 +141,13 @@
 
     <section id="experience" class="section">
         <div class="container">
-            <h2>Experiencia Laboral</h2>
+            <h2 data-i18n="experience.title">Experiencia Laboral</h2>
             <div class="experience-item" data-aos="zoom-in">
-                <div class="experience-content">
-                    <h3>Desarrollador Full Stack - H&M Inmobiliaria y Construcción</h3>
-                    <p><strong>H&M Inmobiliaria y Construcción | Julio 2025 - Agosto 2025</strong></p>
-                    <p>Desarrollé una landing page moderna y responsiva para la empresa inmobiliaria, enfocada en la venta de lotes residenciales en la Urbanización El Bonsai en Lambayeque.</p>
-                    <p>Implementé funcionalidades como formularios de contacto, galería de proyectos, integración con Google Maps, y diseño optimizado para conversión de ventas, destacando las ventajas estratégicas de ubicación y facilidades de pago.</p>
+            <div class="experience-content">
+                    <h3 data-i18n="experience.items.hm.title">Desarrollador Full Stack - H&M Inmobiliaria y Construcción</h3>
+                    <p><strong data-i18n="experience.items.hm.date">H&M Inmobiliaria y Construcción | Julio 2025 - Agosto 2025</strong></p>
+                    <p data-i18n="experience.items.hm.p1">Desarrollé una landing page moderna y responsiva para la empresa inmobiliaria, enfocada en la venta de lotes residenciales en la Urbanización El Bonsai en Lambayeque.</p>
+                    <p data-i18n="experience.items.hm.p2">Implementé funcionalidades como formularios de contacto, galería de proyectos, integración con Google Maps, y diseño optimizado para conversión de ventas, destacando las ventajas estratégicas de ubicación y facilidades de pago.</p>
                     <div class="technology-icons">
                         <i class="devicon-html5-plain colored" title="HTML5"></i>
                         <i class="devicon-css3-plain colored" title="CSS3"></i>
@@ -154,10 +160,10 @@
             </div>
             <div class="experience-item" data-aos="zoom-in">
                 <div class="experience-content">
-                    <h3>Desarrollador Full Stack - Universidad Nacional Mayor de San Marcos</h3>
-                    <p><strong>Universidad Nacional Mayor de San Marcos | Abril 2025 - Junio 2025</strong></p>
-                    <p>Desarrollé un Sistema Web de Balanced Scorecard para la medición de Indicadores de Calidad, implementando un sistema de roles robusto con 4 niveles de acceso: Administrador, Calificador, Asignador y Usuario.</p>
-                    <p>El sistema permite la gestión integral de indicadores de calidad, reportes en tiempo real y seguimiento de evaluaciones, optimizando los procesos de medición y control de calidad institucional.</p>
+                    <h3 data-i18n="experience.items.unmsm.title">Desarrollador Full Stack - Universidad Nacional Mayor de San Marcos</h3>
+                    <p><strong data-i18n="experience.items.unmsm.date">Universidad Nacional Mayor de San Marcos | Abril 2025 - Junio 2025</strong></p>
+                    <p data-i18n="experience.items.unmsm.p1">Desarrollé un Sistema Web de Balanced Scorecard para la medición de Indicadores de Calidad, implementando un sistema de roles robusto con 4 niveles de acceso: Administrador, Calificador, Asignador y Usuario.</p>
+                    <p data-i18n="experience.items.unmsm.p2">El sistema permite la gestión integral de indicadores de calidad, reportes en tiempo real y seguimiento de evaluaciones, optimizando los procesos de medición y control de calidad institucional.</p>
                     <div class="technology-icons">
                         <i class="devicon-nextjs-plain colored" title="Next.js"></i>
                         <i class="devicon-typescript-plain colored" title="TypeScript"></i>
@@ -171,13 +177,10 @@
             
             <div class="experience-item" data-aos="zoom-in">
                 <div class="experience-content">
-                    <h3>Desarrollador Full Stack - Oficina de Tecnologías de la Información</h3>
-                    <p><strong>Universidad Nacional Pedro Ruiz Gallo | Junio 2024 - Marzo 2025</strong></p>
-                    <p>Prácticante Pre-Profesional de un Sistema de Gestión de Documentos y un Sistema de Consultas de Interoperabilidad Digital del Estado - UNPRG, utilizando tecnologías como
-                        PHP para Backend y Laravel para Frontend.</p>
-                    <p>Diseñé y desarrollé las funcionalidades del sistema, con la generación de certificaciones,
-                        diplomas, constancias para la universidad junto con el control de la respectiva Base de Datos.
-                    </p>
+                    <h3 data-i18n="experience.items.oti.title">Desarrollador Full Stack - Oficina de Tecnologías de la Información</h3>
+                    <p><strong data-i18n="experience.items.oti.date">Universidad Nacional Pedro Ruiz Gallo | Junio 2024 - Marzo 2025</strong></p>
+                    <p data-i18n="experience.items.oti.p1">Prácticante Pre-Profesional de un Sistema de Gestión de Documentos y un Sistema de Consultas de Interoperabilidad Digital del Estado - UNPRG, utilizando tecnologías como PHP para Backend y Laravel para Frontend.</p>
+                    <p data-i18n="experience.items.oti.p2">Diseñé y desarrollé las funcionalidades del sistema, con la generación de certificaciones, diplomas, constancias para la universidad junto con el control de la respectiva Base de Datos.</p>
                     <div class="technology-icons">
                         <i class="devicon-php-plain colored" title="PHP"></i>
                         <i class="devicon-laravel-plain colored" title="Laravel"></i>
@@ -190,13 +193,10 @@
             </div>
             <div class="experience-item" data-aos="zoom-in">
                 <div class="experience-content">
-                    <h3>Desarrollador Full Stack - Comercial Manayay</h3>
-                    <p><strong>Junio 2022 - Octubre 2022</strong></p>
-                    <p>Lideré el desarrollo e implementación de un Sistema de Gestión Comercial, utilizando tecnologías
-                        como Java y MariaDB.</p>
-                    <p>Diseñé y desarrollé todas las funcionalidades del sistema, incluyendo gestión de almacenamiento,
-                        consultas, anulación de ventas y generación de reportes. Control de la Base de datos como hacer
-                        el respaldo y restauración desde el mismo software.</p>
+                    <h3 data-i18n="experience.items.manayay.title">Desarrollador Full Stack - Comercial Manayay</h3>
+                    <p><strong data-i18n="experience.items.manayay.date">Junio 2022 - Octubre 2022</strong></p>
+                    <p data-i18n="experience.items.manayay.p1">Lideré el desarrollo e implementación de un Sistema de Gestión Comercial, utilizando tecnologías como Java y MariaDB.</p>
+                    <p data-i18n="experience.items.manayay.p2">Diseñé y desarrollé todas las funcionalidades del sistema, incluyendo gestión de almacenamiento, consultas, anulación de ventas y generación de reportes. Control de la Base de datos como hacer el respaldo y restauración desde el mismo software.</p>
                     <div class="technology-icons">
                         <i class="devicon-java-plain colored" title="Java"></i>
                         <i class="devicon-mariadb-original" title="MariaDB"></i>
@@ -208,14 +208,10 @@
             </div>
             <div class="experience-item" data-aos="zoom-in">
                 <div class="experience-content">
-                    <h3>Desarrollador Full Stack - Grupo Tecnitel</h3>
-                    <p><strong>Enero 2022 - Abril 2022</strong></p>
-                    <p>Lideré el desarrollo e implementación de un Sistema de Gestión de Inventarios, utilizando
-                        tecnologías como Java
-                        y MySQL.</p>
-                    <p>Diseñé e implementé una interfaz intuitiva y eficiente para gestionar el inventario de la
-                        empresa, permitiendo la entrada y salida de productos, así como la realización de consultas y
-                        reportes.</p>
+                    <h3 data-i18n="experience.items.tecnitel.title">Desarrollador Full Stack - Grupo Tecnitel</h3>
+                    <p><strong data-i18n="experience.items.tecnitel.date">Enero 2022 - Abril 2022</strong></p>
+                    <p data-i18n="experience.items.tecnitel.p1">Lideré el desarrollo e implementación de un Sistema de Gestión de Inventarios, utilizando tecnologías como Java y MySQL.</p>
+                    <p data-i18n="experience.items.tecnitel.p2">Diseñé e implementé una interfaz intuitiva y eficiente para gestionar el inventario de la empresa, permitiendo la entrada y salida de productos, así como la realización de consultas y reportes.</p>
                     <div class="technology-icons">
                         <i class="devicon-java-plain colored" title="Java"></i>
                         <i class="devicon-mysql-plain colored" title="MySQL"></i>
@@ -230,14 +226,14 @@
 
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Proyectos Personales</h2>
+            <h2 class="section-title" data-i18n="projects.title">Proyectos Personales</h2>
             <div class="projects-grid">
                 <div class="project-card" data-aos="zoom-in" onclick="openModal('modalpp1')">
                     <img src="Img/sisventas/FondoPantallaPrincipal.jpg" alt="Sistema Gestion Comercial">
-                    <div class="project-info">
-                        <h3>Sistema de Gestión Comercial</h3>
-                        <p>Gestión de ventas, inventario, proveedores, clientes, roles y reportes para cualquier tipo de rubro de una empresa.</p>
-                    </div>
+            <div class="project-info">
+                <h3 data-i18n="projects.items.sisventas.title">Sistema de Gestión Comercial</h3>
+                <p data-i18n="projects.items.sisventas.desc">Gestión de ventas, inventario, proveedores, clientes, roles y reportes para cualquier tipo de rubro de una empresa.</p>
+            </div>
                     <div class="projectos-icons">
                         <i class="devicon-java-plain colored" title="Java"></i>
                         <i class="devicon-mysql-plain colored" title="MySQL"></i>
@@ -266,8 +262,8 @@
                 <div class="project-card" data-aos="zoom-in" onclick="openModal('modalpp2')">
                     <img src="Img/sislibrary/cap.png" alt="Sistema de Biblioteca">
                     <div class="project-info">
-                        <h3>Sistema de Gestion de Biblioteca</h3>
-                        <p>Gestión completa de préstamos, devoluciones e inventario de libros.</p>
+                        <h3 data-i18n="projects.items.sislibrary.title">Sistema de Gestion de Biblioteca</h3>
+                        <p data-i18n="projects.items.sislibrary.desc">Gestión completa de préstamos, devoluciones e inventario de libros.</p>
                     </div>
                     <div class="projectos-icons">
                         <i class="devicon-react-original colored" title="React"></i>
@@ -364,13 +360,13 @@
                 </div>
             </div>
             <br> <br>
-            <h2 class="section-title">Proyectos Laborales</h2>
+            <h2 class="section-title" data-i18n="projects.workTitle">Proyectos Laborales</h2>
             <div class="projects-grid">
                 <div class="project-card" data-aos="zoom-in" onclick="openModal('modalpl1')">
                     <img src="Img/sisgcv/FondoPrincipal.jpeg" alt="Sistema Gestion Comercial">
                     <div class="project-info">
-                        <h3>Sistema de Ventas</h3>
-                        <p>Gestión de ventas, inventario y reportes para pequeñas y medianas empresas.</p>
+                        <h3 data-i18n="projects.items.pl.sisventas.title">Sistema de Ventas</h3>
+                        <p data-i18n="projects.items.pl.sisventas.desc">Gestión de ventas, inventario y reportes para pequeñas y medianas empresas.</p>
                     </div>
                     <div class="projectos-icons">
                         <i class="devicon-java-plain colored" title="Java"></i>
@@ -400,8 +396,8 @@
                 <div class="project-card" data-aos="zoom-in" onclick="openModal('modalpl2')">
                     <img src="Img/sisdoc/s1.png" alt="Sistema de Gestión de Documentos">
                     <div class="project-info">
-                        <h3>Sistema de Gestión de Documentos</h3>
-                        <p>Control y organización eficiente de documentos con versiones.</p>
+                        <h3 data-i18n="projects.items.pl.sisdoc.title">Sistema de Gestión de Documentos</h3>
+                        <p data-i18n="projects.items.pl.sisdoc.desc">Control y organización eficiente de documentos con versiones.</p>
                     </div>
                     <div class="projectos-icons">
                         <i class="devicon-php-plain colored" title="PHP"></i>
@@ -431,8 +427,8 @@
                 <div class="project-card" data-aos="zoom-in" onclick="openModal('modalpl3')">
                     <img src="Img/sispide/FondoPrincipal.png" alt="Sistema de Gestión de Documentos">
                     <div class="project-info">
-                        <h3>Sistema de Consultas de Interoperabilidad Digital del Estado - UNPRG</h3>
-                        <p>Control de Usuarios, Control de Consultas, Gráfico de Consultas Realizadas.</p>
+                        <h3 data-i18n="projects.items.pl.sispide.title">Sistema de Consultas de Interoperabilidad Digital del Estado - UNPRG</h3>
+                        <p data-i18n="projects.items.pl.sispide.desc">Control de Usuarios, Control de Consultas, Gráfico de Consultas Realizadas.</p>
                     </div>
                     <div class="projectos-icons">
                         <i class="devicon-php-plain colored" title="PHP"></i>
@@ -462,8 +458,8 @@
                 <div class="project-card" data-aos="zoom-in" onclick="openModal('modalpl4')">
                     <img src="Img/Bonsai/Portada.png" alt="Sistema de Gestión de Documentos">
                     <div class="project-info">
-                        <h3>Landing Page - Urbanización El Bonsai</h3>
-                        <p>Landing page moderna, diseño responsivo con formulario de contacto y descripción de la urbanización.</p>
+                        <h3 data-i18n="projects.items.pl.bonsai.title">Landing Page - Urbanización El Bonsai</h3>
+                        <p data-i18n="projects.items.pl.bonsai.desc">Landing page moderna, diseño responsivo con formulario de contacto y descripción de la urbanización.</p>
                     </div>
                     <div class="projectos-icons">
                         <i class="devicon-html5-plain colored" title="HTML5"></i>
@@ -493,8 +489,8 @@
                 <div class="project-card" data-aos="zoom-in" onclick="openModal('modalpl5')">
                     <img src="Img/unmsm/u1.png" alt="Sistema Web de Balanced Scorecard">
                     <div class="project-info">
-                        <h3>Sistema Web de Balanced Scorecard</h3>
-                        <p>Sistema web para la medición de Indicadores de Calidad con 4 roles de usuario y gestión integral de indicadores.</p>
+                        <h3 data-i18n="projects.items.pl.bsc.title">Sistema Web de Balanced Scorecard</h3>
+                        <p data-i18n="projects.items.pl.bsc.desc">Sistema web para la medición de Indicadores de Calidad con 4 roles de usuario y gestión integral de indicadores.</p>
                     </div>
                     <div class="projectos-icons">
                         <i class="devicon-nextjs-plain colored" title="NEXTJS"></i>
@@ -527,7 +523,7 @@
 
 
     <section id="education" class="section">
-        <h2>Estudios</h2>
+        <h2 data-i18n="education.title">Estudios</h2>
 
         <div class="cardsx-containerx">
             <!-- Card 1 -->
@@ -538,10 +534,10 @@
                     </div>
                     <div class="cardx-back">
                         <div class="cardx-content">
-                            <h3>Universidad Nacional Pedro Ruiz Gallo</h3>
-                            <p>Ingeniería de Sistemas</p>
-                            <p>Estudiante 10mo Ciclo</p>
-                            <p>4to Puesto</p>
+                            <h3 data-i18n="education.unprg.name">Universidad Nacional Pedro Ruiz Gallo</h3>
+                            <p data-i18n="education.unprg.career">Ingeniería de Sistemas</p>
+                            <p data-i18n="education.unprg.status">Estudiante 10mo Ciclo</p>
+                            <p data-i18n="education.unprg.rank">4to Puesto</p>
                             <!-- <button class="cert-btn" onclick="openModal('Img/Certificados/unprg_certificate.jpg')">Ver Certificado</button> -->
                         </div>
                     </div>
@@ -556,11 +552,11 @@
                     </div>
                     <div class="cardx-back">
                         <div class="cardx-content">
-                            <h3>Udemy</h3>
+                            <h3 data-i18n="education.udemy">Udemy</h3>
                             <p>Java</p>
                             <p>MCV</p>
                             <p>JavaWeb</p>
-                            <p>Enero 2021 - Setiembre 2021</p>
+                            <p data-i18n="education.dates.java">Enero 2021 - Setiembre 2021</p>
                             <!-- <button class="cert-btn" onclick="openModal('Img/Certificados/Java.jpg')">Ver Certificado</button> -->
                         </div>
                     </div>
@@ -575,12 +571,12 @@
                     </div>
                     <div class="cardx-back">
                         <div class="cardx-content">
-                            <h3>Udemy</h3>
+                            <h3 data-i18n="education.udemy">Udemy</h3>
                             <!-- <p>MySQL - PostgreSQL - MariaDB </p> -->
                             <p>MySQL</p>
                             <p>PostgreSQL</p>
                             <p>MariaDB</p>
-                            <p>Marzo 2022 - Agosto 2022</p>
+                            <p data-i18n="education.dates.sql">Marzo 2022 - Agosto 2022</p>
                             <!-- <button class="cert-btn" onclick="openModal('Img/Certificados/MySQL.jpg')">Ver Certificado Mysql</button>
                             <button class="cert-btn" onclick="openModal('Img/Certificados/PostgreSQL.jpg')">Ver Certificado PostgreSQL</button>
                             <button class="cert-btn" onclick="openModal('Img/Certificados/MariaDB.jpg')">Ver Certificado MariaDB</button> -->
@@ -597,11 +593,11 @@
                     </div>
                     <div class="cardx-back">
                         <div class="cardx-content">
-                            <h3>Udemy</h3>
+                            <h3 data-i18n="education.udemy">Udemy</h3>
                             <!-- <p>Git & GitHub</p> -->
                             <p>Git</p>
                             <p>GitHub</p>
-                            <p>Mayo 2023 - Agosto 2023</p>
+                            <p data-i18n="education.dates.git">Mayo 2023 - Agosto 2023</p>
                             <!-- <button class="cert-btn" onclick="openModal('Img/Certificados/Git&GitHub.jpg')">Ver Certificado</button> -->
                         </div>
                     </div>
@@ -616,13 +612,13 @@
                     </div>
                     <div class="cardx-back">
                         <div class="cardx-content">
-                            <h3>Udemy</h3>
+                            <h3 data-i18n="education.udemy">Udemy</h3>
                             <!-- <p>HTML - CSS - JavaScript</p> -->
                             <p>HTML</p>
                             <p>CSS</p>
                             <p>Bootstrap</p>
                             <p>JavaScript</p>
-                            <p>Diciembre 2023 - Junio 2024</p>
+                            <p data-i18n="education.dates.web">Diciembre 2023 - Junio 2024</p>
                             <!-- <button class="cert-btn" onclick="openModal('Img/Certificados/HTML-CSS-JS.jpg')">Ver Certificado</button> -->
                         </div>
                     </div>
@@ -641,7 +637,7 @@
                             <!-- <p>React - NodeJs</p> -->
                             <p>ReactJs</p>
                             <p>NodeJs</p>
-                            <p>Julio 2024 - Setiembre 2024</p>
+                            <p data-i18n="education.dates.reactnode">Julio 2024 - Setiembre 2024</p>
                             <!-- <button class="cert-btn" onclick="openModal('Img/Certificados/ReactJs.jpg')">Ver Certificado ReactJs</button>
                             <button class="cert-btn" onclick="openModal('Img/Certificados/NodeJs.jpg')">Ver Certificado NodeJs</button> -->
                         </div>
@@ -657,10 +653,10 @@
                     </div>
                     <div class="cardx-back">
                         <div class="cardx-content">
-                            <h3>Universidad Nacional de Ingenieria</h3>
+                            <h3 data-i18n="education.uni">Universidad Nacional de Ingenieria</h3>
                             <!-- <p>React - NodeJs</p> -->
-                            <p>Fundamentos de Gestión de Proyectos bajo el enfoque Scrum</p>
-                            <p>Octubre 2024 - Diciembre 2024</p>
+                            <p data-i18n="education.uni.scrum">Fundamentos de Gestión de Proyectos bajo el enfoque Scrum</p>
+                            <p data-i18n="education.dates.scrum">Octubre 2024 - Diciembre 2024</p>
                             <!-- <button class="cert-btn" onclick="openModal('Img/Certificados/ReactJs.jpg')">Ver Certificado ReactJs</button>
                             <button class="cert-btn" onclick="openModal('Img/Certificados/NodeJs.jpg')">Ver Certificado NodeJs</button> -->
                         </div>
@@ -675,10 +671,10 @@
                     </div>
                     <div class="cardx-back">
                         <div class="cardx-content">
-                            <h3>Universidad Nacional de Ingenieria</h3>
+                            <h3 data-i18n="education.uni">Universidad Nacional de Ingenieria</h3>
                             <!-- <p>React - NodeJs</p> -->
-                            <p>Cloud Computing AWS - Azure - Google Cloud</p>
-                            <p>Octubre 2024 - Noviembre 2024</p>
+                            <p data-i18n="education.uni.cloud">Cloud Computing AWS - Azure - Google Cloud</p>
+                            <p data-i18n="education.dates.cloud">Octubre 2024 - Noviembre 2024</p>
                             <!-- <button class="cert-btn" onclick="openModal('Img/Certificados/ReactJs.jpg')">Ver Certificado ReactJs</button>
                             <button class="cert-btn" onclick="openModal('Img/Certificados/NodeJs.jpg')">Ver Certificado NodeJs</button> -->
                         </div>
@@ -700,7 +696,7 @@
 
     <section id="contact" class="section" data-aos="zoom-in">
         <div class="container">
-            <h2>Contacto</h2>
+            <h2 data-i18n="contact.title">Contacto</h2>
             <!-- <p class="contact-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p> -->
             
             <div class="contact-grid">
@@ -709,11 +705,11 @@
 
                     
                     <div class="contact-details">
-                        <h4>Información de Contacto</h4>
+                        <h4 data-i18n="contact.infoTitle">Información de Contacto</h4>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
-                                <strong>Email</strong>
+                                <strong data-i18n="contact.email">Email</strong>
                                 <a href="mailto:juanbarturench@gmail.com?subject=Interesado%20en%20contactarte&body=Hola%20Manuel%20Barturen,%20me%20interesa%20contactarme%20contigo.">juanbarturench@gmail.com</a>
                             </div>
                         </div>
@@ -721,7 +717,7 @@
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <div>
-                                <strong>Teléfono</strong>
+                                <strong data-i18n="contact.phone">Teléfono</strong>
                                 <a href="tel:+51924658309">+51 924658309</a>
                             </div>
                         </div>
@@ -729,34 +725,34 @@
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <strong>Ubicación</strong>
-                                <span>Lambayeque, Perú</span>
+                                <strong data-i18n="contact.location">Ubicación</strong>
+                                <span data-i18n="contact.locationValue">Lambayeque, Perú</span>
                             </div>
                         </div>
                         
                         <div class="contact-item">
                             <i class="fas fa-clock"></i>
                             <div>
-                                <strong>Disponibilidad</strong>
-                                <span>Lunes - Viernes: 9:00 AM - 6:00 PM</span>
+                                <strong data-i18n="contact.availability">Disponibilidad</strong>
+                                <span data-i18n="contact.availabilityValue">Lunes - Viernes: 9:00 AM - 6:00 PM</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="social-links">
-                        <h4>Redes Sociales</h4>
+                        <h4 data-i18n="contact.socialTitle">Redes Sociales</h4>
                         <div class="social-grid">
                             <a href="https://www.linkedin.com/in/mbarturen/" target="_blank" class="social-link linkedin">
                                 <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
+                                <span data-i18n="hero.linkedin">LinkedIn</span>
                             </a>
                             <a href="https://github.com/ManuelBarturen2001/" target="_blank" class="social-link github">
                                 <i class="fab fa-github"></i>
-                                <span>GitHub</span>
+                                <span data-i18n="hero.github">GitHub</span>
                             </a>
                             <a href="https://wa.me/51924658309?text=Hola%20Manuel,%20me%20interesa%20tu%20trabajo" target="_blank" class="social-link whatsapp">
                                 <i class="fab fa-whatsapp"></i>
-                                <span>WhatsApp</span>
+                                <span data-i18n="contact.whatsapp">WhatsApp</span>
                             </a>
                         </div>
                     </div>
@@ -765,44 +761,44 @@
                 <!-- Formulario de Contacto -->
                 <div class="contact-form-section" data-aos="fade-left">
                     <div class="form-container">
-                        <h4>Envíame un mensaje</h4>
+                        <h4 data-i18n="contact.formTitle">Envíame un mensaje</h4>
                         <!-- <p>Cuéntame sobre tu proyecto y te responderé en menos de 24 horas.</p> -->
                         
                         <form id="contact-form" method="POST">
                             <div class="form-group">
-                                <label for="name">Nombre completo *</label>
-                                <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+                                <label for="name" data-i18n="contact.form.name">Nombre completo *</label>
+                                <input type="text" id="name" name="name" required placeholder="Tu nombre completo" data-i18n-placeholder="contact.form.namePlaceholder">
                             </div>
                         
                             <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                                <label for="email" data-i18n="contact.form.email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com" data-i18n-placeholder="contact.form.emailPlaceholder">
                             </div>
                         
                             <div class="form-group">
-                                <label for="subject">Asunto *</label>
-                                <input type="text" id="subject" name="subject" required placeholder="¿En qué puedo ayudarte?">
+                                <label for="subject" data-i18n="contact.form.subject">Asunto *</label>
+                                <input type="text" id="subject" name="subject" required placeholder="¿En qué puedo ayudarte?" data-i18n-placeholder="contact.form.subjectPlaceholder">
                             </div>
                         
                             <div class="form-group">
-                                <label for="message">Mensaje *</label>
-                                <textarea id="message" name="message" required placeholder="Describe tu proyecto o consulta..."></textarea>
+                                <label for="message" data-i18n="contact.form.message">Mensaje *</label>
+                                <textarea id="message" name="message" required placeholder="Describe tu proyecto o consulta..." data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
                             </div>
                         
                             <div class="form-actions">
                                 <button type="submit" class="submit-btn">
                                     <i class="fas fa-paper-plane"></i>
-                                    Enviar Mensaje
+                                    <span data-i18n="contact.form.send">Enviar Mensaje</span>
                                 </button>
                         
                                 <button id="whatsapp8" type="button" class="whatsapp-btn">
                                     <i class="fab fa-whatsapp"></i>
-                                    Enviar Mensaje
+                                    <span data-i18n="contact.form.send">Enviar Mensaje</span>
                                 </button>
                             </div>
                         </form>
                         
-                        <div id="success-message" style="display: none; margin-top: 1rem; color: #0f1e3b ; font-weight: bold;">
+                        <div id="success-message" style="display: none; margin-top: 1rem; color: #0f1e3b ; font-weight: bold;" data-i18n="contact.form.success">
                             Muchas gracias por querer ponerte en contacto, te responderé en menos de 24 horas.
                         </div>
 
@@ -813,24 +809,24 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Manuel Barturen. Todos los derechos reservados.</p>
+        <p data-i18n="footer.copyright">&copy; 2025 Manuel Barturen. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Modales para proyectos -->
     <div id="modalpp1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modalpp1')">&times;</span>
-            <h3 class="modal-title">Sistema de Gestión Comercial</h3>
+            <h3 class="modal-title" data-i18n="projects.items.sisventas.title">Sistema de Gestión Comercial</h3>
             <br>
-            <p class="modal-description">Un sistema integral para la gestión de ventas, inventario y generación de
+            <p class="modal-description" data-i18n="projects.items.sisventas.modal.desc">Un sistema integral para la gestión de ventas, inventario y generación de
                 reportes, diseñado para optimizar las operaciones de pequeñas y medianas empresas.</p>
             <ul class="modal-features">
-                <li>Gestión de ventas e inventario</li>
-                <li>Generación de reportes detallados</li>
-                <li>Roles de administrador y vendedor</li>
-                <li>Manejo de categorías y productos</li>
-                <li>Seguimiento de clientes y proveedores</li>
-                <li>Gráficos de ventas y ganancias</li>
+                <li data-i18n="projects.items.sisventas.modal.f1">Gestión de ventas e inventario</li>
+                <li data-i18n="projects.items.sisventas.modal.f2">Generación de reportes detallados</li>
+                <li data-i18n="projects.items.sisventas.modal.f3">Roles de administrador y vendedor</li>
+                <li data-i18n="projects.items.sisventas.modal.f4">Manejo de categorías y productos</li>
+                <li data-i18n="projects.items.sisventas.modal.f5">Seguimiento de clientes y proveedores</li>
+                <li data-i18n="projects.items.sisventas.modal.f6">Gráficos de ventas y ganancias</li>
             </ul>
             <!-- Nueva sección de galería de imágenes -->
             <div class="modal-gallery">
@@ -846,7 +842,7 @@
             <!-- <li id="whatsapp" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li> -->
 
             <button class="w2" id="whatsapp">
-                Contactame
+                <span data-i18n="contact.cta">Contactame</span>
                 <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
@@ -871,17 +867,17 @@
     <div id="modalpp2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modalpp2')">&times;</span>
-            <h3 class="modal-title">Sistema de Gestion de Biblioteca</h3>
+            <h3 class="modal-title" data-i18n="projects.items.sislibrary.title">Sistema de Gestion de Biblioteca</h3>
             <br>
-            <p class="modal-description">Una solución completa para la gestión de bibliotecas, que facilita el control
+            <p class="modal-description" data-i18n="projects.items.sislibrary.modal.desc">Una solución completa para la gestión de bibliotecas, que facilita el control
                 de préstamos, devoluciones y el inventario de libros.</p>
             <ul class="modal-features">
-                <li>Gestión de préstamos y devoluciones</li>
-                <li>Catálogo completo de libros</li>
-                <li>Roles: administrador, bibliotecario y prestamista</li>
-                <li>Seguimiento de disponibilidad de libros</li>
-                <li>Historial de préstamos por usuario</li>
-                <li>Notificaciones de vencimientos</li>
+                <li data-i18n="projects.items.sislibrary.modal.f1">Gestión de préstamos y devoluciones</li>
+                <li data-i18n="projects.items.sislibrary.modal.f2">Catálogo completo de libros</li>
+                <li data-i18n="projects.items.sislibrary.modal.f3">Roles: administrador, bibliotecario y prestamista</li>
+                <li data-i18n="projects.items.sislibrary.modal.f4">Seguimiento de disponibilidad de libros</li>
+                <li data-i18n="projects.items.sislibrary.modal.f5">Historial de préstamos por usuario</li>
+                <li data-i18n="projects.items.sislibrary.modal.f6">Notificaciones de vencimientos</li>
             </ul>
             <div class="modal-gallery">
                 <img src="Img/sislibrary/1.png" alt="Menu" onclick="openImageInNewTab('Img/sislibrary/1.png')">
@@ -892,7 +888,7 @@
             </div>
             <!-- <li id="whatsapp1" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li> -->
             <button class="w2" id="whatsapp1">
-                Conctatame
+                <span data-i18n="contact.cta">Contactame</span>
                 <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
@@ -969,19 +965,19 @@
     <div id="modalpp4" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modalpp4')">&times;</span>
-            <h3 class="modal-title">E-commerce</h3>
+            <h3 class="modal-title" data-i18n="projects.items.ecommerce.title">E-commerce</h3>
             <br>
-            <p class="modal-description">Plataforma completa de comercio electrónico desarrollada con tecnologías modernas que ofrece una experiencia de compra integral. El sistema incluye todas las funcionalidades esenciales de un e-commerce profesional, desde la gestión de productos hasta el seguimiento de pedidos.</p>
+            <p class="modal-description" data-i18n="projects.items.ecommerce.modal.desc">Plataforma completa de comercio electrónico desarrollada con tecnologías modernas que ofrece una experiencia de compra integral. El sistema incluye todas las funcionalidades esenciales de un e-commerce profesional, desde la gestión de productos hasta el seguimiento de pedidos.</p>
             <ul class="modal-features">
-                <li>Pasarela de pagos integrada y segura</li>
-                <li>Selección por categorías de productos</li>
-                <li>Carrito de compras dinámico</li>
-                <li>Envío a domicilio con seguimiento</li>
-                <li>Recojo en tienda con notificaciones</li>
-                <li>Seguimiento de pedidos en tiempo real</li>
-                <li>Gestión de inventario automática</li>
-                <li>Panel de administración completo</li>
-                <li>Interfaz responsiva y moderna</li>
+                <li data-i18n="projects.items.ecommerce.modal.f1">Pasarela de pagos integrada y segura</li>
+                <li data-i18n="projects.items.ecommerce.modal.f2">Selección por categorías de productos</li>
+                <li data-i18n="projects.items.ecommerce.modal.f3">Carrito de compras dinámico</li>
+                <li data-i18n="projects.items.ecommerce.modal.f4">Envío a domicilio con seguimiento</li>
+                <li data-i18n="projects.items.ecommerce.modal.f5">Recojo en tienda con notificaciones</li>
+                <li data-i18n="projects.items.ecommerce.modal.f6">Seguimiento de pedidos en tiempo real</li>
+                <li data-i18n="projects.items.ecommerce.modal.f7">Gestión de inventario automática</li>
+                <li data-i18n="projects.items.ecommerce.modal.f8">Panel de administración completo</li>
+                <li data-i18n="projects.items.ecommerce.modal.f9">Interfaz responsiva y moderna</li>
             </ul>
             <div class="modal-gallery">
                 <img src="Img/Ecommerce/e1.png" alt="E-commerce1" onclick="openImageInNewTab('Img/Ecommerce/e1.png')">
@@ -997,7 +993,7 @@
             </div>
             <!-- <li id="whatsapp" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li> -->
             <button class="w2" id="whatsapp2">
-                Contactame
+                <span data-i18n="contact.cta">Contactame</span>
                 <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
@@ -1022,16 +1018,15 @@
     <div id="modalpl1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modalpl1')">&times;</span>
-            <h3 class="modal-title">Sistema de Ventas</h3>
+            <h3 class="modal-title" data-i18n="projects.items.pl.sisventas.title">Sistema de Ventas</h3>
             <br>
-            <p class="modal-description">Un sistema integral para la gestión de ventas, inventario y generación de
-                reportes, diseñado para optimizar las operaciones de pequeñas y medianas empresas.</p>
+            <p class="modal-description" data-i18n="projects.items.pl.sisventas.modal.desc">Un sistema integral para la gestión de ventas, inventario y generación de reportes, diseñado para optimizar las operaciones de pequeñas y medianas empresas.</p>
             <ul class="modal-features">
-                <li>Gestión de ventas e inventario</li>
-                <li>Generación de reportes detallados</li>
-                <li>Roles de administrador y vendedor</li>
-                <li>Manejo de categorías y productos</li>
-                <li>Seguimiento de clientes y proveedores</li>
+                <li data-i18n="projects.items.pl.sisventas.modal.f1">Gestión de ventas e inventario</li>
+                <li data-i18n="projects.items.pl.sisventas.modal.f2">Generación de reportes detallados</li>
+                <li data-i18n="projects.items.pl.sisventas.modal.f3">Roles de administrador y vendedor</li>
+                <li data-i18n="projects.items.pl.sisventas.modal.f4">Manejo de categorías y productos</li>
+                <li data-i18n="projects.items.pl.sisventas.modal.f5">Seguimiento de clientes y proveedores</li>
             </ul>
             <!-- Nueva sección de galería de imágenes -->
             <div class="modal-gallery">
@@ -1047,7 +1042,7 @@
             <!-- <li id="whatsapp" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li> -->
 
             <button class="w2" id="whatsapp3">
-                Contactame
+                <span data-i18n="contact.cta">Contactame</span>
                 <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
@@ -1072,17 +1067,16 @@
     <div id="modalpl2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modalpl2')">&times;</span>
-            <h3 class="modal-title">Sistema de Gestión de Documentos</h3>
+            <h3 class="modal-title" data-i18n="projects.items.pl.sisdoc.title">Sistema de Gestión de Documentos</h3>
             <br>
-            <p class="modal-description">Un sistema eficiente para la creación, almacenamiento y control de versiones de
-                documentos oficiales en organizaciones.</p>
+            <p class="modal-description" data-i18n="projects.items.pl.sisdoc.modal.desc">Un sistema eficiente para la creación, almacenamiento y control de versiones de documentos oficiales en organizaciones.</p>
             <ul class="modal-features">
-                <li>Control de versiones de documentos</li>
-                <li>Organización por asuntos y facultades</li>
-                <li>Búsqueda avanzada de documentos</li>
-                <li>Gestión de permisos de acceso</li>
-                <li>Historial de modificaciones</li>
-                <li>Generación de codigo QR en los documentos</li>
+                <li data-i18n="projects.items.pl.sisdoc.modal.f1">Control de versiones de documentos</li>
+                <li data-i18n="projects.items.pl.sisdoc.modal.f2">Organización por asuntos y facultades</li>
+                <li data-i18n="projects.items.pl.sisdoc.modal.f3">Búsqueda avanzada de documentos</li>
+                <li data-i18n="projects.items.pl.sisdoc.modal.f4">Gestión de permisos de acceso</li>
+                <li data-i18n="projects.items.pl.sisdoc.modal.f5">Historial de modificaciones</li>
+                <li data-i18n="projects.items.pl.sisdoc.modal.f6">Generación de codigo QR en los documentos</li>
             </ul>
             <div class="modal-gallery">
                 <img src="Img/sisdoc/s2.jpeg" alt="Menu" onclick="openImageInNewTab('Img/sisdoc/s2.jpeg')">
@@ -1092,7 +1086,7 @@
             </div>
             <!-- <li id="whatsapp2" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li> -->
             <button class="w2" id="whatsapp4">
-                Contactame
+                <span data-i18n="contact.cta">Contactame</span>
                 <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
@@ -1117,16 +1111,16 @@
     <div id="modalpl3" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modalpl3')">&times;</span>
-            <h3 class="modal-title">Sistema de Consultas de Interoperabilidad Digital del Estado - UNPRG</h3>
+            <h3 class="modal-title" data-i18n="projects.items.pl.sispide.title">Sistema de Consultas de Interoperabilidad Digital del Estado - UNPRG</h3>
             <br>
-            <p class="modal-description">Un sistema eficiente para la creación de usuarios para las consultas hacia proveedores externos, registro y almacenamiento de consultas, además de un dashboard interactivo</p>
+            <p class="modal-description" data-i18n="projects.items.pl.sispide.modal.desc">Un sistema eficiente para la creación de usuarios para las consultas hacia proveedores externos, registro y almacenamiento de consultas, además de un dashboard interactivo</p>
             <ul class="modal-features">
-                <li>Control de Usuarios</li>
-                <li>Organización por proveedores</li>
-                <li>Búsqueda avanzada de consultas por fechas</li>
-                <li>Gestión de permisos de acceso</li>
-                <li>Historial de consultas</li>
-                <li>Generación de gráficos</li>
+                <li data-i18n="projects.items.pl.sispide.modal.f1">Control de Usuarios</li>
+                <li data-i18n="projects.items.pl.sispide.modal.f2">Organización por proveedores</li>
+                <li data-i18n="projects.items.pl.sispide.modal.f3">Búsqueda avanzada de consultas por fechas</li>
+                <li data-i18n="projects.items.pl.sispide.modal.f4">Gestión de permisos de acceso</li>
+                <li data-i18n="projects.items.pl.sispide.modal.f5">Historial de consultas</li>
+                <li data-i18n="projects.items.pl.sispide.modal.f6">Generación de gráficos</li>
             </ul>
             <div class="modal-gallery">
                 <img src="Img/sispide/dashboard.jpeg" alt="Dashborad" onclick="openImageInNewTab('Img/sispide/dashboard.jpeg')">
@@ -1137,7 +1131,7 @@
             </div>
             <!-- <li id="whatsapp2" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li> -->
             <button class="w2" id="whatsapp5">
-                Contactame
+                <span data-i18n="contact.cta">Contactame</span>
                 <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
@@ -1162,18 +1156,18 @@
     <div id="modalpl4" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modalpl4')">&times;</span>
-            <h3 class="modal-title">Landing Page - Urbanización El Bonsai</h3>
+            <h3 class="modal-title" data-i18n="projects.items.pl.bonsai.title">Landing Page - Urbanización El Bonsai</h3>
             <br>
-            <p class="modal-description">Una landing page moderna y responsiva diseñada para H&M Inmobiliaria, enfocada en la venta de lotes residenciales en la Urbanización El Bonsai en Lambayeque.</p>
+            <p class="modal-description" data-i18n="projects.items.pl.bonsai.modal.desc">Una landing page moderna y responsiva diseñada para H&M Inmobiliaria, enfocada en la venta de lotes residenciales en la Urbanización El Bonsai en Lambayeque.</p>
             <ul class="modal-features">
-                <li>Diseño moderno y responsivo</li>
-                <li>Ubicación estratégica (cerca de UNPRG, Hospital Belén)</li>
-                <li>Seguridad garantizada (vigilancia 24/7)</li>
-                <li>Documentación legal 100% en regla (inscrito en SUNARP)</li>
-                <li>Facilidades de pago y financiamiento directo</li>
-                <li>Galería de imágenes y testimonios de familias satisfechas</li>
-                <li>Integración con Google Maps para fácil ubicación</li>
-                <li><a href="https://app.marketingh3.pro/v2/preview/n0D5O3gBbrFtHRLBS9Tx" target="_blank">Urbanización El Bonsai</a></li>
+                <li data-i18n="projects.items.pl.bonsai.modal.f1">Diseño moderno y responsivo</li>
+                <li data-i18n="projects.items.pl.bonsai.modal.f2">Ubicación estratégica (cerca de UNPRG, Hospital Belén)</li>
+                <li data-i18n="projects.items.pl.bonsai.modal.f3">Seguridad garantizada (vigilancia 24/7)</li>
+                <li data-i18n="projects.items.pl.bonsai.modal.f4">Documentación legal 100% en regla (inscrito en SUNARP)</li>
+                <li data-i18n="projects.items.pl.bonsai.modal.f5">Facilidades de pago y financiamiento directo</li>
+                <li data-i18n="projects.items.pl.bonsai.modal.f6">Galería de imágenes y testimonios de familias satisfechas</li>
+                <li data-i18n="projects.items.pl.bonsai.modal.f7">Integración con Google Maps para fácil ubicación</li>
+                <li><a href="https://app.marketingh3.pro/v2/preview/n0D5O3gBbrFtHRLBS9Tx" target="_blank" data-i18n="projects.items.pl.bonsai.modal.link">Urbanización El Bonsai</a></li>
             </ul>
             <div class="modal-gallery">
                 <img src="Img/Bonsai/b1.png" alt="Landing1" onclick="openImageInNewTab('Img/Bonsai/b1.png')">
@@ -1184,7 +1178,7 @@
             </div>
             <!-- <li id="whatsapp2" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li> -->
             <button class="w2" id="whatsapp6">
-                Contactame
+                <span data-i18n="contact.cta">Contactame</span>
                 <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
@@ -1210,18 +1204,18 @@
     <div id="modalpl5" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modalpl5')">&times;</span>
-            <h3 class="modal-title">Sistema Web de Balanced Scorecard</h3>
+            <h3 class="modal-title" data-i18n="projects.items.pl.bsc.title">Sistema Web de Balanced Scorecard</h3>
             <br>
-            <p class="modal-description">Sistema web desarrollado para la Universidad Nacional Mayor de San Marcos (UNMSM) para la medición y gestión de Indicadores de Calidad mediante un Balanced Scorecard. El sistema cuenta con un sistema de roles robusto que permite una gestión integral de indicadores de calidad.</p>
+            <p class="modal-description" data-i18n="projects.items.pl.bsc.modal.desc">Sistema web desarrollado para la Universidad Nacional Mayor de San Marcos (UNMSM) para la medición y gestión de Indicadores de Calidad mediante un Balanced Scorecard. El sistema cuenta con un sistema de roles robusto que permite una gestión integral de indicadores de calidad.</p>
             <ul class="modal-features">
-                <li>Sistema de roles y permisos avanzado</li>
-                <li><strong>Administrador:</strong> Control total del sistema, gestión de usuarios, reportes, seguimiento y configuración general</li>
-                <li><strong>Calificador:</strong> Evalúa y califica a las personas que tienen indicadores asignados</li>
-                <li><strong>Asignador:</strong> Asigna indicadores específicos a las personas del sistema</li>
-                <li><strong>Usuario:</strong> Recibe indicadores asignados y debe realizar archivos para su revisión, aprobación, modificación o rechazo por parte del calificador</li>
-                <li>Gestión integral de indicadores de calidad</li>
-                <li>Reportes y seguimiento en tiempo real</li>
-                <li>Interfaz intuitiva y responsiva</li>
+                <li data-i18n="projects.items.pl.bsc.modal.f0">Sistema de roles y permisos avanzado</li>
+                <li data-i18n="projects.items.pl.bsc.modal.f1"><strong>Administrador:</strong> Control total del sistema, gestión de usuarios, reportes, seguimiento y configuración general</li>
+                <li data-i18n="projects.items.pl.bsc.modal.f2"><strong>Calificador:</strong> Evalúa y califica a las personas que tienen indicadores asignados</li>
+                <li data-i18n="projects.items.pl.bsc.modal.f3"><strong>Asignador:</strong> Asigna indicadores específicos a las personas del sistema</li>
+                <li data-i18n="projects.items.pl.bsc.modal.f4"><strong>Usuario:</strong> Recibe indicadores asignados y debe realizar archivos para su revisión, aprobación, modificación o rechazo por parte del calificador</li>
+                <li data-i18n="projects.items.pl.bsc.modal.f5">Gestión integral de indicadores de calidad</li>
+                <li data-i18n="projects.items.pl.bsc.modal.f6">Reportes y seguimiento en tiempo real</li>
+                <li data-i18n="projects.items.pl.bsc.modal.f7">Interfaz intuitiva y responsiva</li>
             </ul>
             <div class="modal-gallery">
                 <img src="Img/unmsm/u1.png" alt="UNMSM1" onclick="openImageInNewTab('Img/unmsm/u1.png')">
@@ -1232,7 +1226,7 @@
             </div>
             <!-- <li id="whatsapp2" class="whatsappx"><i class="fab fa-whatsapp"></i>Contactame</li> -->
             <button class="w2" id="whatsapp7">
-                Contactame
+                <span data-i18n="contact.cta">Contactame</span>
                 <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
@@ -1543,6 +1537,7 @@
 
 
     <script src="scritp/habilidades.js"></script>
+    <script src="scritp/i18n.js"></script>
     <script src="scritp/scripts.js"></script>
     <script src="scritp/darkmode.js"></script>
 </body>

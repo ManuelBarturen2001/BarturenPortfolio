@@ -175,42 +175,42 @@ function handleLikeClick(event) {
 }
 
 document.getElementById('whatsapp').addEventListener('click', function() {
-  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const formattedMessage = window.__i18n__ ? window.__i18n__.t('whatsapp.interest') : `Hola :D, Me interesa tu proyecto`;
   const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   window.open(whatsappUrl, '_blank');
 });
 document.getElementById('whatsapp1').addEventListener('click', function() {
-  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const formattedMessage = window.__i18n__ ? window.__i18n__.t('whatsapp.interest') : `Hola :D, Me interesa tu proyecto`;
   const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   window.open(whatsappUrl, '_blank');
 });
 document.getElementById('whatsapp2').addEventListener('click', function() {
-  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const formattedMessage = window.__i18n__ ? window.__i18n__.t('whatsapp.interest') : `Hola :D, Me interesa tu proyecto`;
   const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   window.open(whatsappUrl, '_blank');
 });
 document.getElementById('whatsapp3').addEventListener('click', function() {
-  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const formattedMessage = window.__i18n__ ? window.__i18n__.t('whatsapp.interest') : `Hola :D, Me interesa tu proyecto`;
   const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   window.open(whatsappUrl, '_blank');
 });
 document.getElementById('whatsapp4').addEventListener('click', function() {
-  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const formattedMessage = window.__i18n__ ? window.__i18n__.t('whatsapp.interest') : `Hola :D, Me interesa tu proyecto`;
   const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   window.open(whatsappUrl, '_blank');
 });
 document.getElementById('whatsapp5').addEventListener('click', function() {
-  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const formattedMessage = window.__i18n__ ? window.__i18n__.t('whatsapp.interest') : `Hola :D, Me interesa tu proyecto`;
   const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   window.open(whatsappUrl, '_blank');
 });
 document.getElementById('whatsapp6').addEventListener('click', function() {
-  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const formattedMessage = window.__i18n__ ? window.__i18n__.t('whatsapp.interest') : `Hola :D, Me interesa tu proyecto`;
   const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   window.open(whatsappUrl, '_blank');
 });
 document.getElementById('whatsapp7').addEventListener('click', function() {
-  const formattedMessage = `Hola :D, Me interesa tu proyecto`;
+  const formattedMessage = window.__i18n__ ? window.__i18n__.t('whatsapp.interest') : `Hola :D, Me interesa tu proyecto`;
   const whatsappUrl = `https://wa.me/51924658309?text=${formattedMessage}`;
   window.open(whatsappUrl, '_blank');
 });
@@ -219,7 +219,7 @@ document.getElementById('whatsapp8').addEventListener('click', function () {
   const email = document.getElementById('email').value.trim();
   const subject = document.getElementById('subject').value.trim();
   const message = document.getElementById('message').value.trim();
-  const fullMessage = `Hola, soy ${name}\nEmail: ${email}\nAsunto: ${subject}\nMensaje: ${message}`;
+  const fullMessage = window.__i18n__ ? window.__i18n__.tFormat('whatsapp.contactTemplate', name, email, subject, message) : `Hola, soy ${name}\nEmail: ${email}\nAsunto: ${subject}\nMensaje: ${message}`;
   const whatsappUrl = `https://wa.me/51924658309?text=${encodeURIComponent(fullMessage)}`;
   window.open(whatsappUrl, '_blank');
 });
@@ -234,7 +234,9 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   })
   .then(response => {
       if (response.ok) {
-          document.getElementById('success-message').style.display = 'block';
+          const success = document.getElementById('success-message');
+          if (window.__i18n__) success.textContent = window.__i18n__.t('contact.form.success');
+          success.style.display = 'block';
           document.getElementById('contact-form').reset();
       }
   })
